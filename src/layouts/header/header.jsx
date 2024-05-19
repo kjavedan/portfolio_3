@@ -8,7 +8,7 @@ export function Header() {
 
   const navVariants = {
     open: {
-      clipPath: 'circle(100% at calc(100% - 40px) 40px)',
+      clipPath: 'circle(100% at calc(100% - 43px) 40px)',
       height: window.screen.height * 2,
       transition: {
         type: 'spring',
@@ -17,7 +17,7 @@ export function Header() {
       },
     },
     closed: {
-      clipPath: 'circle(30px at calc(100% - 40px) 40px)',
+      clipPath: 'circle(30px at calc(100% - 43px) 40px)',
       height: 'auto',
       transition: {
         delay: 0.5,
@@ -36,33 +36,37 @@ export function Header() {
   }, [isOpen]);
 
   return (
-    <motion.nav
-      className="relative b-solid"
-      initial={false}
-      animate={isOpen ? 'open' : 'closed'}
-    >
-      <MenuToggle toggle={() => toggleOpen()} />
+    <header className="sticky top-0 px-4 py-2 flex items-center justify-between">
+      <div className="flex flex-col">
+        <img src="src/assets/logo.png" alt="logo" className="h-auto w-15" />
+        <span className="text-sm font-light text-dark">
+          Designer & Developer
+        </span>
+      </div>
+      <motion.nav initial={false} animate={isOpen ? 'open' : 'closed'}>
+        <MenuToggle toggle={() => toggleOpen()} />
 
-      {/* Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.5, delay: 0.5 } }}
-            className="fixed inset-0 bg-[rgba(0,0,0,0.5)]"
-            onClick={() => toggleOpen()}
-          />
-        )}
-      </AnimatePresence>
+        {/* Overlay */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: 0.5, delay: 0.5 } }}
+              className="fixed inset-0 bg-[rgba(0,0,0,0.5)]"
+              onClick={() => toggleOpen()}
+            />
+          )}
+        </AnimatePresence>
 
-      {/* Background */}
-      <motion.div
-        className="bg-light fixed right-0 top-0 w-full md:w-200 h-full"
-        variants={navVariants}
-      >
-        <Navigation />
-      </motion.div>
-    </motion.nav>
+        {/* Background */}
+        <motion.div
+          className="bg-light absolute right-0 top-0 w-full md:w-200 "
+          variants={navVariants}
+        >
+          <Navigation />
+        </motion.div>
+      </motion.nav>
+    </header>
   );
 }

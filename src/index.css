@@ -10,4 +10,6 @@ li {
     list-style: none;
 }
 
-:root {}
+:root {
+    font-family: "poppins", sans-serif;
+}

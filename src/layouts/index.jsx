@@ -4,7 +4,7 @@ import Footer from './footer';
 
 export default function MainLayout({ children }) {
   return (
-    <div className="b-solid b-red relative">
+    <div className="relative">
       <Header />
       {children}
       <Footer />
