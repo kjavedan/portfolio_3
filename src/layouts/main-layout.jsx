@@ -4,7 +4,7 @@ import Footer from './footer';
 
 export default function MainLayout({ children }) {
   return (
-    <div className="relative">
+    <div className="relative lg:container mx-auto">
       <Header />
       {children}
       <Footer />

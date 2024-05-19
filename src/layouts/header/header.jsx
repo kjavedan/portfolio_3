@@ -1,72 +1,39 @@
-import { motion, useCycle, AnimatePresence } from 'framer-motion';
-import { MenuToggle } from './menu-toggle';
-import { Navigation } from './navigation';
-import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+
+import NavMobile from './mobile';
+import NavDesktop from './desktop';
 
 export function Header() {
-  const [isOpen, toggleOpen] = useCycle(false, true);
-
-  const navVariants = {
-    open: {
-      clipPath: 'circle(100% at calc(100% - 43px) 40px)',
-      height: window.screen.height * 2,
-      transition: {
-        type: 'spring',
-        stiffness: 40,
-        restDelta: 2,
-      },
-    },
-    closed: {
-      clipPath: 'circle(30px at calc(100% - 43px) 40px)',
-      height: 'auto',
-      transition: {
-        delay: 0.5,
-      },
-    },
-  };
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1600);
 
   useEffect(() => {
-    isOpen
-      ? (document.body.style.overflow = 'hidden')
-      : (document.body.style.overflow = '');
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 1024);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
 
     return () => {
-      document.body.style.overflow = '';
+      window.removeEventListener('resize', handleResize);
     };
-  }, [isOpen]);
+  }, []);
 
   return (
     <header className="sticky top-0 px-4 py-2 flex items-center justify-between">
-      <div className="flex flex-col">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="flex flex-col"
+      >
         <img src="src/assets/logo.png" alt="logo" className="h-auto w-15" />
         <span className="text-sm font-light text-dark">
           Designer & Developer
         </span>
-      </div>
-      <motion.nav initial={false} animate={isOpen ? 'open' : 'closed'}>
-        <MenuToggle toggle={() => toggleOpen()} />
-
-        {/* Overlay */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0, transition: { duration: 0.5, delay: 0.5 } }}
-              className="fixed inset-0 bg-[rgba(0,0,0,0.5)]"
-              onClick={() => toggleOpen()}
-            />
-          )}
-        </AnimatePresence>
-
-        {/* Background */}
-        <motion.div
-          className="bg-light absolute right-0 top-0 w-full md:w-200 "
-          variants={navVariants}
-        >
-          <Navigation />
-        </motion.div>
-      </motion.nav>
+      </motion.div>
+      {isDesktop ? <NavDesktop /> : <NavMobile />}
     </header>
   );
 }

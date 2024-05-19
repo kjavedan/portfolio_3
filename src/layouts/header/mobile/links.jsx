@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { MenuItem } from './menu-item';
+import { navConfig } from '../nav-config';
 
 const variants = {
   open: {
@@ -10,15 +11,13 @@ const variants = {
   },
 };
 
-export const Navigation = () => (
+export const Links = () => (
   <motion.ul
     variants={variants}
     className=" w-100%  mt-10vh flex flex-col gap-4 px-8"
   >
-    {itemIds.map((i) => (
-      <MenuItem i={i} key={i} />
+    {navConfig.map((link) => (
+      <MenuItem i={link.id} key={link.id} />
     ))}
   </motion.ul>
 );
-
-const itemIds = [0, 1, 2, 3];
