@@ -13,7 +13,7 @@ const variants = {
 export const Navigation = () => (
   <motion.ul
     variants={variants}
-    className="b-solid w-100 mt-10vh flex flex-col gap-10 ml-20"
+    className=" w-100%  mt-10vh flex flex-col gap-4 px-8"
   >
     {itemIds.map((i) => (
       <MenuItem i={i} key={i} />
@@ -21,4 +21,4 @@ export const Navigation = () => (
   </motion.ul>
 );
 
-const itemIds = [0, 1, 2, 3, 4];
+const itemIds = [0, 1, 2, 3];
