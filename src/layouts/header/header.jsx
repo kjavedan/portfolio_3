@@ -22,14 +22,18 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 px-4 py-2 flex items-center justify-between">
+    <header className="fixed w-full lg:container z-1  top-0 px-4 py-2 flex items-center justify-between">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         className="flex flex-col"
       >
-        <img src="src/assets/logo.png" alt="logo" className="h-auto w-15" />
-        <span className="text-sm font-light text-dark">
+        <img
+          src="src/assets/logo.png"
+          alt="logo"
+          className="h-auto w-12 lg:w-15"
+        />
+        <span className="text-12px lg:text-sm font-light text-dark">
           Designer & Developer
         </span>
       </motion.div>

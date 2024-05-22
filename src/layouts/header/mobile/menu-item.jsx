@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
 const variants = {
@@ -17,7 +18,7 @@ const variants = {
   },
 };
 
-export const MenuItem = () => {
+export const MenuItem = ({ label }) => {
   return (
     <motion.li
       variants={variants}
@@ -28,7 +29,13 @@ export const MenuItem = () => {
       }}
       className="h-30"
     >
-      <div className="h-full w-full rounded-3xl bg-[#eee] cursor-pointer" />
+      <div className="h-full w-full text-4xl pl-8 capitalize flex font-bold items-center rounded-3xl bg-[--clr-gray] cursor-pointer">
+        {label}
+      </div>
     </motion.li>
   );
+};
+
+MenuItem.propTypes = {
+  label: PropTypes.string,
 };

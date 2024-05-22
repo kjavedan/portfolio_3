@@ -6,13 +6,14 @@
     box-sizing: border-box;
 }
 
+
 li {
     list-style: none;
     font-weight: 300;
 }
 
 li span {
-    color: #4F4F4F;
+    text-transform: capitalize;
 }
 
 li span:hover {
@@ -21,4 +22,8 @@ li span:hover {
 
 :root {
     font-family: "poppins", sans-serif;
+    --font-secondary: "Redacted Script",
+        cursive;
+    --clr-text-title: #414141;
+    --clr-gray: #eee;
 }

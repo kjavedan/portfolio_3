@@ -8,7 +8,7 @@ export function NavMobile() {
 
   const navVariants = {
     open: {
-      clipPath: 'circle(100% at calc(100% - 43px) 40px)',
+      clipPath: 'circle(100% at calc(100% - 43px) 35px)',
       height: window.screen.height * 2,
       transition: {
         type: 'spring',
@@ -17,7 +17,7 @@ export function NavMobile() {
       },
     },
     closed: {
-      clipPath: 'circle(30px at calc(100% - 43px) 40px)',
+      clipPath: 'circle(30px at calc(100% - 43px) 35px)',
       height: 'auto',
       transition: {
         delay: 0.5,
