@@ -54,7 +54,7 @@ export function NavMobile() {
 
       {/* Background */}
       <motion.div
-        className="bg-light absolute right-0 top-0 w-full "
+        className="bg-light absolute right-0 top-0 w-full b-solid"
         variants={navVariants}
       >
         <Links />
