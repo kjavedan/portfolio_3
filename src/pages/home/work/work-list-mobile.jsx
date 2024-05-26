@@ -1,11 +1,21 @@
 import Iconify from 'src/components/iconify/iconify';
-
 import { motion } from 'framer-motion';
 import { useRouter } from 'src/hooks/use-router';
-
 import { paths } from 'src/routes/paths';
 
-// ------------------------------------------------------------
+const parentVariants = {
+  visible: {
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: { opacity: 0, y: 5 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function WorkListMobile() {
   const router = useRouter();
@@ -35,15 +45,22 @@ export default function WorkListMobile() {
   ];
 
   return (
-    <div className="">
+    <motion.div
+      variants={parentVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className=""
+    >
       {projectsDataMobile.map((group, index) => (
-        <div
+        <motion.div
           key={index}
           className="bg-[#F4F5F6] p-3.5 mb-2 rounded-30px flex flex-col gap-2"
         >
           {group.data.map((project, groupIndex) => (
             <motion.div
               key={groupIndex}
+              variants={childVariants}
               whileTap={{ scale: 0.99 }}
               onClick={() => router.push(paths.project(project.path))}
               className="bg-[#E9E9E9] cursor-pointer text-[--clr-title] flex items-center justify-between py-3.5 px-7 text-xl uppercase rounded-30px"
@@ -52,12 +69,11 @@ export default function WorkListMobile() {
               <Iconify icon="pepicons-pencil:arrow-right" />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }
-
 /**
  * * Mobile: we need to group by each application
  * - User interface
