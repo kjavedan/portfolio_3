@@ -1,10 +1,15 @@
 import { motion } from 'framer-motion';
+
+import { useResponsive } from 'src/hooks/use-responsive';
+
 export default function Hero() {
+  const { isDesktop } = useResponsive();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 5 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1 }}
+      transition={{ delay: isDesktop ? 1 : 0 }}
     >
       <h1 className="font-500 text-6xl md:text-[100px] lg:text-[130px] xl:text-[170px] text-center">
         <span>Khaled</span>

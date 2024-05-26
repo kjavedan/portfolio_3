@@ -4,7 +4,7 @@ import { useState } from 'react';
 // ------------------------------------------------------------
 
 export function useResponsive() {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1600);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
 
   useEffect(() => {
     const handleResize = () => {
