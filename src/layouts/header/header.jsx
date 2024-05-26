@@ -1,27 +1,13 @@
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
 
 import NavMobile from './mobile';
 import NavDesktop from './desktop';
 
 import logoImg from 'src/assets/logo.png';
+import { useResponsive } from 'src/hooks/use-responsive';
 
 export function Header() {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1600);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth > 1024);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const { isDesktop } = useResponsive();
 
   return (
     <header className="fixed w-full lg:container z-1  top-0 p-4 flex items-center justify-between">
