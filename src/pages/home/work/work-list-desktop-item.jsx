@@ -60,7 +60,7 @@ export default function WorkListDesktopItem({
       onClick={() => router.push(paths.project(path))}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`bg-[#F4F5F6] rounded-30px cursor-pointer lg:h-20vh  p-8  text-[--clr-title] ${!isHovered ? 'flex items-center' : ''}`}
+      className={`bg-[--clr-gray-bg] rounded-30px cursor-pointer lg:h-20vh min-h-65  p-8  text-[--clr-title] ${!isHovered ? 'flex items-center' : ''}`}
     >
       <div className={`${isHovered ? 'flex justify-between' : ''} relative`}>
         <motion.h3

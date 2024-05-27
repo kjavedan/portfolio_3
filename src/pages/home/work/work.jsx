@@ -19,10 +19,10 @@ export default function Work() {
         >
           <Iconify
             icon="pepicons-pencil:arrow-down-circle"
-            className="w-10 h-10 md:h-12 md:w-12 lg:h-15 lg:w-15"
+            className="w-10 h-10 lg:h-12 lg:w-12 md:h-11 md:w-11"
           />
         </motion.div>
-        <h3 className="font-light text-3xl md:text-5xl lg:text-7xl ml-2 lg:ml-4">
+        <h3 className="font-500 text-3xl md:text-4xl lg:text-5xl ml-2 lg:ml-4">
           Some of my work
         </h3>
       </div>

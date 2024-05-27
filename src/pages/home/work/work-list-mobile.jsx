@@ -55,7 +55,7 @@ export default function WorkListMobile() {
       {projectsDataMobile.map((group, index) => (
         <motion.div
           key={index}
-          className="bg-[#F4F5F6] p-3.5 mb-2 rounded-30px flex flex-col gap-2"
+          className="bg-[--clr-gray-bg] p-3.5 mb-2 rounded-30px flex flex-col gap-2"
         >
           {group.data.map((project, groupIndex) => (
             <motion.div

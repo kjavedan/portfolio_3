@@ -6,7 +6,6 @@
     box-sizing: border-box;
 }
 
-
 li {
     list-style: none;
     font-weight: 300;
@@ -24,6 +23,81 @@ li span:hover {
     font-family: "poppins", sans-serif;
     --font-secondary: "Redacted Script",
         cursive;
-    --clr-text-title: #414141;
+    --clr-text-title: #000000;
+    --clr-text-subtitle: #414141;
+    --clr-text-body: #686868;
+
     --clr-gray: #eee;
+    --clr-gray-bg: #F4F5F6;
+}
+
+.button-primary {
+    background-color: black;
+    width: 100%;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    height: 50px;
+    font-family: "poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.button-primary:active {
+    transform: scale(.99);
+}
+
+.project-sections__title {
+    font-size: 2.5rem;
+    color: var(--clr-text-title);
+    font-weight: 500;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.image-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 500px) {
+    .button-primary {
+        width: 300px;
+        height: 65px;
+        border-radius: 40px;
+        font-size: 22px;
+    }
+
+    .project-sections__title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .project-sections__title {
+        font-size: 3.75rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .project-sections__title {
+        font-size: 4.5rem;
+    }
 }
