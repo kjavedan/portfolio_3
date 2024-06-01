@@ -11,7 +11,7 @@ const containerVariants = {
 };
 
 const titleVariants = {
-  initial: { x: 40, y: 50 },
+  initial: { x: 25, y: 50 },
   hover: {
     x: 0,
     y: 0,
@@ -60,11 +60,13 @@ export default function WorkListDesktopItem({
       onClick={() => router.push(paths.project(path))}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`bg-[--clr-gray-bg] rounded-30px cursor-pointer lg:h-20vh min-h-65  p-8  text-[--clr-title] ${!isHovered ? 'flex items-center' : ''}`}
+      className={`bg-[--clr-gray-bg] rounded-30px cursor-pointer min-h-55  p-6  text-[--clr-title] ${!isHovered ? 'flex items-center' : ''}`}
     >
-      <div className={`${isHovered ? 'flex justify-between' : ''} relative`}>
+      <div
+        className={`${isHovered ? 'flex items-center justify-between' : ''} relative`}
+      >
         <motion.h3
-          className={`uppercase text-2xl`}
+          className={`uppercase text-xl`}
           initial="initial"
           animate={isHovered ? 'hover' : 'initial'}
           variants={titleVariants}
@@ -83,9 +85,9 @@ export default function WorkListDesktopItem({
       </div>
       {isHovered && (
         <div className="relative h-full mt-2">
-          <div className="h-50%">
+          <div className="h-40%">
             <motion.p
-              className="font-light line-clamp-3"
+              className="font-light line-clamp-2 text-[#6F6F6F]"
               initial="initial"
               animate="hover"
               variants={descriptionVariants}
@@ -93,11 +95,11 @@ export default function WorkListDesktopItem({
               {description}
             </motion.p>
           </div>
-          <motion.div className="flex flex-wrap items-center gap-3 mt-3">
+          <motion.div className="flex flex-wrap items-center gap-1.5 mt-3">
             {techStack.map((item, index) => (
               <motion.p
                 key={index}
-                className="bg-[#D7D7D7] px-3 py-2 rounded-3xl text-sm text-[#6F6F6F]"
+                className="bg-[#D7D7D7] px-2.5 py-1.5 rounded-3xl text-sm text-[#6F6F6F]"
                 custom={index}
                 initial="initial"
                 animate="hover"

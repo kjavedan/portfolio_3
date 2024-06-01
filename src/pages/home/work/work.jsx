@@ -27,7 +27,7 @@ export default function Work() {
         </h3>
       </div>
 
-      <div className="mt-6 lg:mt-10">
+      <div className="mt-6">
         {isDesktop ? <WorkListDesktop /> : <WorkListMobile />}
       </div>
     </div>

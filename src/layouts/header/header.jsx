@@ -29,7 +29,7 @@ export function Header() {
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="flex flex-col"
+        className="flex flex-col cursor-pointer"
         onClick={() => router.push('/')}
       >
         <img src={logoImg} alt="logo" className="h-auto w-12 lg:w-15" />

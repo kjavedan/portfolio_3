@@ -56,7 +56,7 @@ export default function AboutMe() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="mt-6 lg:mt-10 bg-[--clr-gray-bg] px-4 py-8 lg:p-16 lg:gap-6 rounded-3xl flex flex-col gap-4"
+        className="mt-6 bg-[--clr-gray-bg] px-4 py-8 lg:px-10 rounded-3xl flex flex-col gap-4"
       >
         {myHobbies.map((hobby, index) => (
           <motion.p

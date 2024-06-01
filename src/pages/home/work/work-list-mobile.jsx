@@ -22,21 +22,18 @@ export default function WorkListMobile() {
 
   const projectsDataMobile = [
     {
-      title: 'chikrice',
       data: [
         { title: 'chikrice', path: 'chikrice' },
         { title: 'chikrice admin', path: 'chikrice-admin' },
       ],
     },
     {
-      title: 'jojooshop',
       data: [
         { title: 'jojooshop', path: 'jojooshop' },
         { title: 'jojooshop admin', path: 'jojooshop-admin' },
       ],
     },
     {
-      title: 'other',
       data: [
         { title: 'web game', path: 'web-game' },
         { title: 'other...', path: 'other' },

@@ -43,6 +43,10 @@ li span:hover {
     font-size: 18px;
     font-weight: 300;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .button-primary:active {
