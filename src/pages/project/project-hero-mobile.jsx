@@ -25,7 +25,7 @@ export default function ProjectHeroMobile({
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      className=" mt-30vh "
+      className=" mt-20vh "
     >
       <h1 className="uppercase project-sections__title">{title}</h1>
       <div className="bg-[--clr-gray-bg] h-80vh w-full h-auto rounded-30px mt-2">
@@ -41,7 +41,7 @@ export default function ProjectHeroMobile({
       <a className="button-primary mt-4" href={siteUrl}>
         visit site
       </a>
-      <div className="mt-40">
+      <div className="mt-30">
         <h3 className="project-sections__title">Tech Stack</h3>
         <motion.div
           variants={containerVariants}

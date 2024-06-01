@@ -22,9 +22,9 @@ export default function ProjectHeroDesktop({
   techStack,
 }) {
   return (
-    <div className="mt-30vh">
+    <div className="mt-20vh">
       <div className="flex items-center justify-between px-10">
-        <h1 className="text-[--clr-text-title] text-4xl md:text-6xl lg:text-7xl uppercase font-500">
+        <h1 className="text-[--clr-text-title] text-3xl md:text-4xl xl:text-7xl  capitalize font-500">
           {title}
         </h1>
         <a className="button-primary" href={siteUrl}>
@@ -32,7 +32,7 @@ export default function ProjectHeroDesktop({
         </a>
       </div>
 
-      <div className="bg-[--clr-gray-bg] h-auto rounded-30px w-full mt-4">
+      <div className="bg-[--clr-gray-bg] h-auto rounded-30px w-full mt-4 ">
         <video
           src={videoSrc}
           alt={title}

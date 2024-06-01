@@ -40,10 +40,9 @@ export default function Project() {
           techStack={projectData.techStack}
         />
       )}
-
-      <ProjectTakeaway takeaway={projectData.takeaway} />
-
-      <ProjectDesign designImages={projectData.designImages} />
+      {!!projectData.designImages?.length && (
+        <ProjectDesign designImages={projectData.designImages} />
+      )}
 
       <ProjectDescription
         description={projectData.description}
@@ -54,6 +53,9 @@ export default function Project() {
         problem={projectData.problemAndSolution?.problem}
         solution={projectData.problemAndSolution?.solution}
       />
+      {!!projectData.takeaway && (
+        <ProjectTakeaway takeaway={projectData.takeaway} />
+      )}
     </div>
   );
 }

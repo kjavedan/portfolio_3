@@ -22,7 +22,7 @@ export default function Work() {
             className="w-10 h-10 lg:h-12 lg:w-12 md:h-11 md:w-11"
           />
         </motion.div>
-        <h3 className="font-500 text-3xl md:text-4xl lg:text-5xl ml-2 lg:ml-4">
+        <h3 className="font-500 text-2xl md:text-4xl ml-2 lg:ml-4">
           Some of my work
         </h3>
       </div>

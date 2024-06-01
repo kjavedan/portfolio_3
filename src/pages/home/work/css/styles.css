@@ -1,0 +1,23 @@
+.button-group__item {
+    padding: .4rem .8rem;
+    color: var(--clr-text-body);
+    font-size: 16px;
+}
+
+.button-group {
+    padding: .7rem .5rem;
+    background-color: var(--clr-gray-bg);
+}
+
+@media screen and (max-height: 700px) {
+    .button-group {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .button-group__item {
+        padding: .3rem .7rem;
+        color: var(--clr-text-body);
+        font-size: 14px;
+    }
+}

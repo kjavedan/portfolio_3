@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 export default function ProjectProblemSolution({ problem, solution }) {
   return (
-    <div className="mt-40">
+    <div className="mt-30">
       <h3 className="project-sections__title">What it does?</h3>
 
       <div className="mt-4 bg-[--clr-gray-bg] px-4 pb-6 pt-4 lg:pt-3 lg:p- rounded-30px lg:flex items-center gap-30">

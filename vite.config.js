@@ -46,6 +46,7 @@ export default defineConfig({
       },
     }),
     Unocss({
+      rules: [['custom-container', { width: '1100px' }]],
       presets: [
         presetUno(),
         presetAttributify(),

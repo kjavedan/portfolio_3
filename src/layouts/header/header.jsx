@@ -24,7 +24,7 @@ export function Header() {
 
   return (
     <header
-      className={`${isHome ? 'fixed' : 'relative'} bg-white z-10 w-full lg:container z-1  top-0 p-4 flex items-center justify-between`}
+      className={`${isHome ? 'fixed' : 'relative'} bg-white z-10 w-full lg:custom-container z-1  top-0 p-4 pt-5.5 flex items-center justify-between`}
     >
       <motion.div
         initial={{ opacity: 0, y: 10 }}
@@ -32,7 +32,7 @@ export function Header() {
         className="flex flex-col cursor-pointer"
         onClick={() => router.push('/')}
       >
-        <img src={logoImg} alt="logo" className="h-auto w-12 lg:w-15" />
+        <img src={logoImg} alt="logo" className="h-auto w-8 lg:w-10" />
       </motion.div>
       {isDesktop ? <NavDesktop /> : <NavMobile />}
     </header>

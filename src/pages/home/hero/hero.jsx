@@ -11,7 +11,7 @@ export default function Hero() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: isDesktop ? 1 : 0 }}
     >
-      <h1 className="font-500 text-6xl md:text-[100px] lg:text-[130px] xl:text-[170px] text-center">
+      <h1 className="font-500 text-6xl md:text-[100px] lg:text-[130px] xl:text-[140px] text-center">
         <span>Khaled</span>
         <span className="font-[--font-secondary] block md:inline md:pl-10">
           javdan

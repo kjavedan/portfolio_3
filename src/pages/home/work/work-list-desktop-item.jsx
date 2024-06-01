@@ -95,19 +95,38 @@ export default function WorkListDesktopItem({
               {description}
             </motion.p>
           </div>
-          <motion.div className="flex flex-wrap items-center gap-1.5 mt-3">
-            {techStack.map((item, index) => (
-              <motion.p
-                key={index}
-                className="bg-[#D7D7D7] px-2.5 py-1.5 rounded-3xl text-sm text-[#6F6F6F]"
-                custom={index}
-                initial="initial"
-                animate="hover"
-                variants={techStackVariants}
-              >
-                {item}
-              </motion.p>
-            ))}
+          <motion.div className="flex items-center gap-1.5 mt-3">
+            {techStack.map((item, index) => {
+              if (index < 2) {
+                return (
+                  <motion.p
+                    key={index}
+                    className="bg-[#D7D7D7] px-2.5 py-1.5 rounded-3xl text-sm text-[#6F6F6F]"
+                    custom={index}
+                    initial="initial"
+                    animate="hover"
+                    variants={techStackVariants}
+                  >
+                    {item}
+                  </motion.p>
+                );
+              } else if (index === 2) {
+                return (
+                  <motion.p
+                    key={index}
+                    className="bg-[#D7D7D7] px-2.5 py-1.5 rounded-3xl text-sm text-[#6F6F6F]"
+                    custom={index}
+                    initial="initial"
+                    animate="hover"
+                    variants={techStackVariants}
+                  >
+                    ...
+                  </motion.p>
+                );
+              } else {
+                return null;
+              }
+            })}
           </motion.div>
         </div>
       )}

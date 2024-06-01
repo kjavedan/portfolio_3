@@ -46,7 +46,7 @@ export default function AboutMe() {
             className="w-12 h-12 lg:h-12 lg:w-12 md:h-11 md:w-11"
           />
         </motion.div>
-        <h3 className="font-500  text-2xl md:text-4xl lg:text-5xl ml-3 lg:ml-4">
+        <h3 className="font-500  text-2xl md:text-4xl ml-3 lg:ml-4">
           When I’m not coding you will find me
         </h3>
       </div>

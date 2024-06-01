@@ -1,4 +1,10 @@
 import bomei from 'src/assets/bomei.png';
+import fithub_1 from 'src/assets/fithub-desk.png';
+import fithub_2 from 'src/assets/fithub-mobile.png';
+import chikriceImg from 'src/assets/chikrice-desk.png';
+import jojooshopImg from 'src/assets/jojooshop_old.png';
+import uniestate_1 from 'src/assets/uniestate-mobile.png';
+import uniestate_2 from 'src/assets/uniestate-desktop.png';
 
 // CHIKRICE
 import chikriceVideoMobile from 'src/assets/chikrice-mobile.mp4';
@@ -32,7 +38,7 @@ export const projectsData = [
     takeaway: 'asdfasd',
     description:
       "Chikrice Is my own project that I'm working on it full time, if you are interested to join me please don't hesitate to contact me",
-    designImages: [bomei, bomei],
+    designImages: [chikriceImg, fithub_1, fithub_2],
     problemAndSolution: {
       problem: 'adf',
       solution: 'asdfa',
@@ -46,10 +52,10 @@ export const projectsData = [
     videoSrcMobile: jojooshopVideoMobile,
     videoSrcDesktop: jojooshopVideoDesktop,
     techStack: ['React.js', 'MUI'],
-    takeaway: 'asdfasd',
+    takeaway: '',
     description:
       'ChikRice description will go here In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be ChikRice description will go here In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be ',
-    designImages: [bomei],
+    designImages: [],
     problemAndSolution: {
       problem: 'adf',
       solution: 'asdfa',
@@ -83,7 +89,7 @@ export const projectsData = [
       'theme (dark, light)',
       'About, Contact, and FAQ pages',
     ],
-    designImages: [bomei],
+    designImages: [jojooshopImg],
     problemAndSolution: {
       problem: 'adf',
       solution: 'asdfa',
@@ -100,23 +106,6 @@ export const projectsData = [
     takeaway: 'asdfasd',
     description:
       "JoJooShop admin_panel serves as the admin interface of the JoJooShop web application, a cutting-edge custom ecommerce platform meticulously crafted to meet the client's exacting standards.",
-    designImages: [bomei],
-    problemAndSolution: {
-      problem: 'adf',
-      solution: 'asdfa',
-    },
-  },
-  {
-    id: 5,
-    path: 'web-game',
-    title: 'web game',
-    siteUrl: 'https://khaledjavedan.vercel.app',
-    videoSrcMobile: portfolioVideoMobile,
-    videoSrcDesktop: portfolioVideoDesktop,
-    techStack: ['Three.js', 'Next.js', 'SCSS', 'Canvas'],
-    takeaway: 'asdfasd',
-    description:
-      " In this portfolio project, I've combined my skills in React/Next.js with some fun Three.js elements to create an entertaining web game. Sticking to my signature style, I've gone for a sleek and straightforward design in this project, as well as in several others. Take a look around—I hope you enjoy it as much as I did building it!",
     features: [
       'Manual signup/login',
       'Detailed and comprihensive statistics dashboard',
@@ -137,6 +126,24 @@ export const projectsData = [
     },
   },
   {
+    id: 5,
+    path: 'web-game',
+    title: 'web game',
+    siteUrl: 'https://khaledjavedan.vercel.app',
+    videoSrcMobile: portfolioVideoMobile,
+    videoSrcDesktop: portfolioVideoDesktop,
+    techStack: ['Three.js', 'Next.js', 'SCSS', 'Canvas'],
+    takeaway: 'asdfasd',
+    description:
+      " In this portfolio project, I've combined my skills in React/Next.js with some fun Three.js elements to create an entertaining web game. Sticking to my signature style, I've gone for a sleek and straightforward design in this project, as well as in several others. Take a look around—I hope you enjoy it as much as I did building it!",
+
+    designImages: [bomei],
+    problemAndSolution: {
+      problem: 'adf',
+      solution: 'asdfa',
+    },
+  },
+  {
     id: 6,
     path: 'uniestate',
     title: 'uniestate',
@@ -147,7 +154,7 @@ export const projectsData = [
     takeaway: 'asdfasd',
     description:
       "Uniestate is my personal venture where I'm picking up new skills while enhancing the website's speed and user-friendliness. I'm concentrating on areas like image loading speed, efficient data storage for faster returns, and ensuring top-notch image quality. I'm maintaining a sleek and modern design that resonates well with the architectural field.",
-    designImages: [bomei],
+    designImages: [uniestate_1, uniestate_2],
     problemAndSolution: {
       problem: 'adf',
       solution: 'asdfa',

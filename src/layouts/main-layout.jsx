@@ -3,7 +3,7 @@ import Header from './header';
 
 export default function MainLayout({ children }) {
   return (
-    <div className="relative lg:container mx-auto">
+    <div className="relative lg:custom-container mx-auto">
       <Header />
       {children}
     </div>

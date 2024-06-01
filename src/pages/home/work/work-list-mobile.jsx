@@ -1,8 +1,9 @@
+import './css/styles.css';
+
 import Iconify from 'src/components/iconify/iconify';
 import { motion } from 'framer-motion';
 import { useRouter } from 'src/hooks/use-router';
 import { paths } from 'src/routes/paths';
-
 const parentVariants = {
   visible: {
     transition: {
@@ -47,12 +48,12 @@ export default function WorkListMobile() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className=""
+      className="work-list-mobile"
     >
       {projectsDataMobile.map((group, index) => (
         <motion.div
           key={index}
-          className="bg-[--clr-gray-bg] p-3.5 mb-2 rounded-30px flex flex-col gap-2"
+          className=" button-group mb-2 rounded-30px flex flex-col gap-2"
         >
           {group.data.map((project, groupIndex) => (
             <motion.div
@@ -60,7 +61,7 @@ export default function WorkListMobile() {
               variants={childVariants}
               whileTap={{ scale: 0.99 }}
               onClick={() => router.push(paths.project(project.path))}
-              className="bg-[#E9E9E9] cursor-pointer text-[--clr-title] flex items-center justify-between py-3.5 px-7 text-xl uppercase rounded-30px"
+              className="bg-[#E9E9E9] cursor-pointer text-[--clr-title] flex items-center justify-between button-group__item px-7 uppercase rounded-30px"
             >
               <span>{project.title}</span>
               <Iconify icon="pepicons-pencil:arrow-right" />
@@ -71,19 +72,3 @@ export default function WorkListMobile() {
     </motion.div>
   );
 }
-/**
- * * Mobile: we need to group by each application
- * - User interface
- * - Admin interface
- * * onClick => open application page
- * * for animation they will be fast and spring to the top in view once
- *
- * ? Desktop: we need to keep each in a card that they all fit the screen size
- * * onHower we show the description and the tech stack of each app
- * * and expand the card we can keep them in accordian manner that we keep one expanded and otehr closed
- * * onClick we open the page in a smooth animative way
- *
- * ! Steps to take
- * 1. create seperate data for mobile and desktop
- * 2. render the mobile data on the screen
- */
