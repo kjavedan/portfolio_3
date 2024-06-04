@@ -40,19 +40,25 @@ export default function Project() {
           techStack={projectData.techStack}
         />
       )}
-      {!!projectData.designImages?.length && (
-        <ProjectDesign designImages={projectData.designImages} />
-      )}
-
       <ProjectDescription
         description={projectData.description}
         features={projectData?.features}
       />
 
-      <ProjectProblemSolution
-        problem={projectData.problemAndSolution?.problem}
-        solution={projectData.problemAndSolution?.solution}
-      />
+      {!!projectData.designImages?.length && (
+        <ProjectDesign designImages={projectData.designImages} />
+      )}
+
+      {!!projectData?.problemAndSolution && (
+        <ProjectProblemSolution
+          intro={projectData.problemAndSolution?.intro}
+          stages={projectData.problemAndSolution?.stages}
+          problems={projectData.problemAndSolution?.problems}
+          solution={projectData.problemAndSolution.solution}
+          problemsIntro={projectData.problemAndSolution?.problemsIntro}
+        />
+      )}
+
       {!!projectData.takeaway && (
         <ProjectTakeaway takeaway={projectData.takeaway} />
       )}

@@ -19,8 +19,8 @@ export default function Links() {
       variants={variants}
       className="flex items-center gap-2"
     >
-      {navConfig.map((link) => (
-        <MenuItem key={link.id} label={link.label} />
+      {navConfig.map((item) => (
+        <MenuItem key={item.id} label={item.label} link={item.link} />
       ))}
     </motion.ul>
   );

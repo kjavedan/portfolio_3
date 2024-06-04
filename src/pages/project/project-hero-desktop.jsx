@@ -27,19 +27,19 @@ export default function ProjectHeroDesktop({
         <h1 className="text-[--clr-text-title] text-3xl md:text-4xl xl:text-7xl  capitalize font-500">
           {title}
         </h1>
-        <a className="button-primary" href={siteUrl}>
+        <a className="button-primary" href={siteUrl} target="_blank">
           visit site
         </a>
       </div>
 
-      <div className="bg-[--clr-gray-bg] h-auto rounded-30px w-full mt-4 ">
+      <div className="bg-[--clr-gray-bg] h-auto rounded-30px w-full mt-4 p-8 pb-6 ">
         <video
           src={videoSrc}
           alt={title}
           muted
           controls
           autoPlay
-          className="w-full rounded-30px"
+          className="w-full rounded-30px shadow"
         />
       </div>
       <motion.div

@@ -9,7 +9,7 @@ export default function Hero() {
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: isDesktop ? 1 : 0 }}
+      transition={{ delay: isDesktop ? 0.5 : 0 }}
     >
       <h1 className="font-500 text-6xl md:text-[100px] lg:text-[130px] xl:text-[140px] text-center">
         <span>Khaled</span>

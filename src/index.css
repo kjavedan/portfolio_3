@@ -19,6 +19,11 @@ li span:hover {
     color: black;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 :root {
     font-family: "poppins", sans-serif;
     --font-secondary: "Redacted Script",
@@ -54,7 +59,7 @@ li span:hover {
 }
 
 .project-sections__title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--clr-text-title);
     font-weight: 500;
 }
@@ -90,18 +95,12 @@ li span:hover {
     }
 
     .project-sections__title {
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
 }
 
 @media screen and (min-width: 768px) {
     .project-sections__title {
-        font-size: 3.75rem;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .project-sections__title {
-        font-size: 4.5rem;
+        font-size: 2.5rem;
     }
 }

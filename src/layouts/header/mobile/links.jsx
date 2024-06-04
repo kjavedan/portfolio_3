@@ -16,8 +16,8 @@ export const Links = () => (
     variants={variants}
     className=" w-100%  mt-10vh flex flex-col gap-4 px-8"
   >
-    {navConfig.map((link) => (
-      <MenuItem key={link.id} label={link.label} />
+    {navConfig.map((item) => (
+      <MenuItem key={item.id} label={item.label} link={item.link} />
     ))}
   </motion.ul>
 );

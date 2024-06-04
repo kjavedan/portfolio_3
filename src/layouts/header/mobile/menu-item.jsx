@@ -18,7 +18,7 @@ const variants = {
   },
 };
 
-export const MenuItem = ({ label }) => {
+export const MenuItem = ({ label, link }) => {
   return (
     <motion.li
       variants={variants}
@@ -30,7 +30,9 @@ export const MenuItem = ({ label }) => {
       className="h-30"
     >
       <div className="h-full w-full text-4xl pl-8 capitalize flex font-bold items-center rounded-3xl bg-[--clr-gray] cursor-pointer">
-        {label}
+        <a href={link} target="_blank">
+          {label}
+        </a>
       </div>
     </motion.li>
   );
@@ -38,4 +40,5 @@ export const MenuItem = ({ label }) => {
 
 MenuItem.propTypes = {
   label: PropTypes.string,
+  link: PropTypes.string,
 };

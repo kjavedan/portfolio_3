@@ -28,14 +28,14 @@ export default function ProjectHeroMobile({
       className=" mt-20vh "
     >
       <h1 className="uppercase project-sections__title">{title}</h1>
-      <div className="bg-[--clr-gray-bg] h-80vh w-full h-auto rounded-30px mt-2">
+      <div className="bg-[--clr-gray-bg] h-80vh w-full h-auto rounded-30px mt-2 p-4">
         <video
           src={videoSrc}
           alt={title}
           muted
           controls
           autoPlay
-          className="w-full rounded-30px"
+          className="w-full rounded-30px shadow-sm"
         />
       </div>
       <a className="button-primary mt-4" href={siteUrl}>
