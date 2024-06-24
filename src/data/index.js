@@ -37,7 +37,7 @@ export const projectsData = [
     techStack: ['Vue.js', 'Element Plus', 'Typescript', 'UnoCss'],
     takeaway: '',
     description:
-      'chikrice.com is the software solution for the Chikrice healthy fast food project that I am trying to bring to life. The idea behind chikrice.com is to have one place for everything you need in order to achieve your dream body. This includes generating your custom meal plan based on your preferences, then having it prepared for you at Chikrice restaurants. You can imagine it as your personal trainer and chef who are going to take care of the hassles of meal planning, counting macros, and preparing food, allowing you to focus on just getting results.',
+      'chikrice.com is the software solution for the Chikrice healthy fast food project that I am bringing to life. The idea behind chikrice.com is to have one place for everything you need in order to achieve your dream body. This includes generating your custom meal plan based on your preferences, then having it prepared for you at Chikrice restaurants. You can imagine it as your personal trainer and chef who are going to take care of the hassles of meal planning, counting macros, and preparing food, allowing you to focus on just getting results.',
     features: [
       'Personalization',
       'User authentication',

@@ -37,7 +37,7 @@ export default function WorkListMobile() {
     {
       data: [
         { title: 'web game', path: 'web-game' },
-        { title: 'other...', path: 'other' },
+        { title: 'uniestate', path: 'uniestate' },
       ],
     },
   ];
