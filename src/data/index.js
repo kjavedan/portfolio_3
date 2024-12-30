@@ -10,13 +10,17 @@ import uniestate_2 from 'src/assets/uniestate-desktop.png';
 import chikriceVideoMobile from 'src/assets/chikrice-mobile.mp4';
 import chikriceVideoDesktop from 'src/assets/chikrice-desktop.mp4';
 
+// CHIKRICE V2
+import chikriceV2VideoMobile from 'src/assets/chikrice.v2-mobile.mov';
+import chikriceV2VideoDesktop from 'src/assets/chikrice.v2-desktop.mov';
+
 // JOJOSHOP
 import jojooshopVideoMobile from 'src/assets/jojooshop-mobile.mov';
 import jojooshopVideoDesktop from 'src/assets/jojooshop-desktop.mp4';
 
 // ADMIN JOJOOSHP
-import jojooshopAdminVideoMobile from 'src/assets/jojooshop-mobile.mov';
-import jojooshopAdminVideoDesktop from 'src/assets/jojooshop-desktop.mp4';
+import jojooshopAdminVideoMobile from 'src/assets/jojo-admin-mobile.mov';
+import jojooshopAdminVideoDesktop from 'src/assets/jojo-admin-desktop.mp4';
 
 // UNIESTATE
 import uniestateVideoMobile from 'src/assets/uniestate-mobile.mov';
@@ -28,30 +32,40 @@ import portfolioVideoDesktop from 'src/assets/portfolio-desktop.mp4';
 
 export const projectsData = [
   {
+    id: 2,
+    path: 'chikrice-v2',
+    title: 'chikrice v2',
+    siteUrl: 'https://chikrice.com',
+    videoSrcMobile: chikriceV2VideoMobile,
+    videoSrcDesktop: chikriceV2VideoDesktop,
+    techStack: ['Node', 'MongoDB', 'React.js', 'MUI'],
+    takeaway: '',
+    description: `CHIKRICE V2 is a fitness app I’ve developed to help people improve their health with simple and accessible tools. The app offers personalized meal suggestions, macro tracking, and AI-driven recommendations.
+
+I started with CHIKRICE 1, a basic version without a database, testing the idea with friends and potential users. Now, I’m working full time on CHIKRICE 2, a full-stack app that’s growing and evolving every day as I continue to add new features and improve the experience for users.`,
+    features: [
+      'Ai integration',
+      'Personalization',
+      'Custom Search',
+      'User authentication',
+      'Meal Plan Customization',
+    ],
+    designImages: [],
+  },
+  {
     id: 1,
-    path: 'chikrice',
-    title: 'chikrice',
+    path: 'chikrice-v1',
+    title: 'chikrice v1',
     siteUrl: 'https://chikrice.com',
     videoSrcMobile: chikriceVideoMobile,
     videoSrcDesktop: chikriceVideoDesktop,
     techStack: ['Vue.js', 'Element Plus', 'Typescript', 'UnoCss'],
     takeaway: '',
-    description:
-      'chikrice.com is the software solution for the Chikrice healthy fast food project that I am bringing to life. The idea behind chikrice.com is to have one place for everything you need in order to achieve your dream body. This includes generating your custom meal plan based on your preferences, then having it prepared for you at Chikrice restaurants. You can imagine it as your personal trainer and chef who are going to take care of the hassles of meal planning, counting macros, and preparing food, allowing you to focus on just getting results.',
-    features: [
-      'Personalization',
-      'User authentication',
-      'Security',
-      'Offline capabilities',
-      'Push notification',
-      'Payment integration',
-      'Social media integration',
-      'User-friendly interface',
-      'Search bar',
-      'Location service',
-      'Analytics',
-      'Customization',
-    ],
+    description: `CHIKRICE V1 was the initial implementation of the idea for a fitness and healthy eating solution. The goal was to create a platform that simplifies meal planning and macro tracking, helping users achieve their fitness goals. I focused on building a simple version of the app and testing it with friends and potential users, gathering feedback to improve the concept.
+
+The vision behind CHIKRICE is to provide users with a personalized meal plan based on their preferences, with future plans to partner with restaurants like CHIKRICE to prepare these meals. It’s designed to be like having a personal trainer and chef in one—handling meal planning so users can focus on achieving their dream body.
+`,
+
     designImages: [chikriceImg, fithub_1, fithub_2],
     problemAndSolution: {
       intro:
@@ -264,19 +278,7 @@ export const projectsData = [
         'Chikrice combines software, restaurants, and products to offer a comprehensive fitness solution. The Chikrice software serves as a free personal trainer, providing customized workout and meal plans tailored to your goals and experience level. Chikrice restaurants sync with the software, preparing and delivering your personalized meal plans. Additionally, Chikrice products are available for purchase through the software or at physical locations. By leveraging a systematic approach, Chikrice reduces traditional costs and ensures fast, affordable, and high-quality service, effectively addressing common fitness and nutrition challenges more efficiently than existing solutions.',
     },
   },
-  {
-    id: 2,
-    path: 'chikrice-admin',
-    title: 'chikrice admin',
-    siteUrl: 'https://admin.chikirce.com',
-    videoSrcMobile: jojooshopVideoMobile,
-    videoSrcDesktop: jojooshopVideoDesktop,
-    techStack: ['React.js', 'MUI'],
-    takeaway: '',
-    description:
-      'admin.chikrice.com is the admin dashboard panel that serves as the management system interface for monitoring and managing user data. This powerful tool is designed to streamline the administrative tasks involved in running the Chikrice project. It enables administrators to track user progress, update meal plans, manage inventory, and ensure that all operations run smoothly.',
-    designImages: [],
-  },
+
   {
     id: 3,
     path: 'jojooshop',
@@ -365,8 +367,8 @@ export const projectsData = [
 export const projectsDataMobile = [
   {
     data: [
-      { title: 'chikrice', path: 'chikrice' },
-      { title: 'chikrice admin', path: 'chikrice-admin' },
+      { title: 'chikrice V1', path: 'chikrice-v1' },
+      { title: 'chikrice V2', path: 'chikrice-v2' },
     ],
   },
   {

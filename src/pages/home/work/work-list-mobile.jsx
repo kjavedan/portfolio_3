@@ -24,8 +24,8 @@ export default function WorkListMobile() {
   const projectsDataMobile = [
     {
       data: [
-        { title: 'chikrice', path: 'chikrice' },
-        { title: 'chikrice admin', path: 'chikrice-admin' },
+        { title: 'chikrice v2', path: 'chikrice-v2' },
+        { title: 'chikrice v1', path: 'chikrice-v1' },
       ],
     },
     {
@@ -61,7 +61,7 @@ export default function WorkListMobile() {
               variants={childVariants}
               whileTap={{ scale: 0.99 }}
               onClick={() => router.push(paths.project(project.path))}
-              className="bg-[#E9E9E9] cursor-pointer text-[--clr-title] flex items-center justify-between button-group__item px-7 uppercase rounded-30px"
+              className="bg-[#E9E9E9] py-3 cursor-pointer text-[--clr-title] flex items-center justify-between button-group__item px-7 uppercase rounded-30px"
             >
               <span>{project.title}</span>
               <Iconify icon="pepicons-pencil:arrow-right" />
